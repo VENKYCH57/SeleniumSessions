@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ActionClasses {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args)  {
 		BrowserUtil b= new BrowserUtil();
 		WebDriver driver=b.IntitDriver("firefox");
 		b.launchUrl("https://www.spicejet.com/");
@@ -22,7 +22,12 @@ public class ActionClasses {
 		By addon=By.xpath("//div[text()='Add-ons']");
 		By zero=By.xpath("//div[text()='Zero Cancellation']");
 		
-		el.parentChildMenueHandle(addon, zero);
+		try {
+			el.parentChildMenueHandle(addon, zero);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
