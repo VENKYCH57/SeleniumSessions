@@ -1,0 +1,15 @@
+<?xml version="1.0"   encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="App Test Suite" verbose="4">
+
+	<test name="Register Test">
+		<parameter name="url" value="https://demo.opencart.com/index.php?route=account/register&amp;language=en-gb" />
+		<parameter name="Browser" value="chrome" />
+		<classes>
+			<class name="Testcases.RegisterTest" />
+		</classes>
+
+	</test>
+	
+</suite>

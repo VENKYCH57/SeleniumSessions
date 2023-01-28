@@ -1,0 +1,31 @@
+<?xml version="1.0"   encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="App Test Suite" thread-count="3" parallel="tests" verbose="4">
+
+	<test name="Amazon Test">
+		<parameter name="url" value="https://www.amazon.com/" />
+		<parameter name="Browser" value="chrome" />
+		<classes>
+			<class name="Testcases.AmazonTest" />
+		</classes>
+
+	</test>
+	<test name="Google Test">
+		<parameter name="url" value="https://www.google.com/" />
+		<parameter name="Browser" value="firefox" />
+		<classes>
+			<class name="Testcases.GoogleTest" />
+		</classes>
+
+	</test>
+	<test name="Freshwork Test">
+		<parameter name="url" value="https://www.freshworks.com/" />
+		<parameter name="Browser" value="edge" />
+		<classes>
+			<class name="Testcases.FreshworkTest" />
+		</classes>
+
+	</test>
+
+</suite>
